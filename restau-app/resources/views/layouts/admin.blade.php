@@ -34,12 +34,12 @@
             </button>
         </div>
         <nav :class="{'block': open, 'hidden': !open}" class="flex-grow px-4 pb-4 md:block md:pb-0 md:overflow-y-auto">
-{{--            <x-admin-nav-link :href="route('admin.categories.index')" :active="request()->routeIs('categories.index')">--}}
-{{--                {{ __('Categories') }}--}}
-{{--            </x-admin-nav-link>--}}
-{{--            <x-admin-nav-link :href="route('admin.menu.index')" :active="request()->routeIs('menu.index')">--}}
-{{--                {{ __('Menu') }}--}}
-{{--            </x-admin-nav-link>--}}
+            <x-nav-link :href="route('admin.menucategories.index')" :active="request()->routeIs('menucategories.index')">
+                {{ __('MenuCategories') }}
+            </x-nav-link>
+            <x-nav-link :href="route('admin.menu.index')" :active="request()->routeIs('menu.index')">
+                {{ __('Menu') }}
+            </x-nav-link>
 {{--            <x-admin-nav-link :href="route('admin.reservations.index')" :active="request()->routeIs('reservations.index')">--}}
 {{--                {{ __('Reservations') }}--}}
 {{--            </x-admin-nav-link>--}}

@@ -30,6 +30,8 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware(['auth', 'admin'])->name('admin.')->prefix('suvaya')->group(function(){
     Route::get('/', [\App\Http\Controllers\Admin\AdminController::class, 'index'])->name('index');
+    Route::resource('/menucategories', \App\Http\Controllers\Admin\MenuCategoryController::class);
+    Route::resource('/menus', \App\Http\Controllers\Admin\MenuController::class);
 });
 
 require __DIR__.'/auth.php';
