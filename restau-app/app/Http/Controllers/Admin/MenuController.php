@@ -8,8 +8,10 @@ use App\Http\Requests\MenuCategoryStoreRequest;
 use App\Http\Requests\MenuStoreRequest;
 use App\Models\Category;
 use App\Models\Menu;
+use App\Models\Cart;
 use App\Models\MenuCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class MenuController extends Controller

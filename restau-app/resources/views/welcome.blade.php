@@ -29,7 +29,9 @@
                     <h2 class="font-weight-light font-italic text-light my-5" style="font-size: 30px;">Feel yourself at home with our authentic food experience.</h2>
                     @if (Route::has('login'))
                         @auth
+                            @if(\Illuminate\Support\Facades\Auth::user()->is_admin)
                             <a href="{{ url('/dashboard') }}" class="btn btn-warning btn-lg">Dashboard</a>
+                            @endif
                         @else
                             <a href="{{ route('login') }}" class="btn btn-success btn-lg px-4 m-3">Log in</a>
                             @if (Route::has('register'))
